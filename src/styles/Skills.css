@@ -1,0 +1,198 @@
+/* Skills Section */
+.skills-section {
+  background-color: #030014; /* Website theme */
+  color: white;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  padding: 20px 40px;
+}
+
+/* Skills Heading */
+.skills-heading {
+  font-size: 2.8rem;
+  color: #ffffff;
+  font-weight: bolder;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Skills Content Container */
+.skills-content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  
+  text-align: left;
+
+}
+
+/* Skills Text Section */
+.skills-text {
+  flex: 5;
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+  margin-top: 100px;
+  padding: 0 10px;
+ 
+  
+}
+
+.skills-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #e884fc;
+}
+
+.skills-text p {
+  margin-bottom: 15px;
+}
+
+/* Skills Container */
+.skills-container {
+  width: 50%;
+  display: flex;
+  justify-content: right;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0 70px ;
+}
+
+/* Canvas Container for the 3D Globe */
+.canvas-container {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Icon Container */
+.icon-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.icon-container svg {
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+}
+
+.icon-container:hover {
+  transform: scale(1.2);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Particles Background */
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .skills-heading {
+    font-size: 2.5rem;
+  }
+
+  .canvas-container {
+    width: 350px;
+    height: 350px;
+  }
+
+  .skills-content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-text {
+    text-align: center;
+    margin: 30px 0;
+    max-width: 80%;
+  }
+
+  .skills-container {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-heading {
+    font-size: 2.2rem;
+  }
+
+  .canvas-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .icon-container svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skills-section {
+    padding: 30px 15px;
+  }
+
+  .skills-text {
+    font-size: 0.9rem;
+    max-width: 90%;
+  }
+
+  .skills-icons {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-heading {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+
+  .canvas-container {
+    width: 280px;
+    height: 280px;
+  }
+
+  .skills-text {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    max-width: 100%;
+  }
+
+  .skills-container {
+    justify-content: center;
+    width: 100%;
+ 
+  }
+
+  .icon-container svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .skills-icons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}

@@ -1,0 +1,91 @@
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: rgba(3, 0, 20, 0.1); /* Make sure it's initially transparent */
+  z-index: 1000;
+  transition: backdrop-filter 0.5s ease, -webkit-backdrop-filter 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.7); /* Light purple shadow */
+  -webkit-backdrop-filter: none; /* No blur initially */
+  backdrop-filter: none; /* No blur initially */
+}
+
+/* Navbar after scroll */
+.navbar.scrolled {
+  -webkit-backdrop-filter: blur(10px); /* Safari/Webkit support */
+  backdrop-filter: blur(10px); /* Standard blur effect */
+  background-color: rgba(3, 0, 20, 0.3); /* Slightly darker transparent background when scrolled */
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.7); /* Keeps the shadow effect */
+}
+
+.logo img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.nav-links {
+  padding: 10px 30px;
+  background-color: rgba(99, 96, 96, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+.nav-links ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-links ul li a {
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px 0;
+}
+
+.nav-links ul li a:hover {
+  color: #e884fc;
+}
+
+/* Responsive Menu Toggle */
+.menu-toggle {
+  cursor: pointer;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+}
+
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .nav-links ul {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+  .social-icons {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+ 
+}

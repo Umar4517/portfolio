@@ -1,0 +1,159 @@
+.overview-section {
+  position: relative;
+  padding: 35px 0;
+  background: #030014;
+  color: white;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.particles-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  
+}
+
+.overview-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1240px;
+  padding: 0 20px;
+}
+
+.intro-card {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.intro-heading {
+  font-size: 2.8rem;
+  
+  color: white;
+  margin-bottom: 20px;
+}
+
+.intro-description,
+.intro-description-1 {
+  font-size: 1rem;
+  color: #b3b3b3;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro-description-1 {
+  margin-top: 25px;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -2;
+  opacity: 0.6;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  transform: translateY(10%) scaleY(1);
+  mix-blend-mode: screen;
+}
+
+/* Cards layout */
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.9rem;
+  max-width: 85%;
+  margin-top: 40px;
+}
+
+.overview-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgb(211, 202, 202);
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(216, 175, 250, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 250px; /* Set consistent height for uniformity */
+}
+
+.overview-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 20px rgba(228, 166, 252, 0.7);
+}
+
+.overview-card img {
+  height: 5rem;
+  width: 5rem;
+  margin-bottom: 1rem; /* Adds space between the image and the title */
+}
+
+.overview-card .icon1 {
+  height: 6rem;
+  width: 6rem;
+}
+
+.overview-card h3 {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .overview-card {
+    height: auto; /* Allow height to adjust on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-heading {
+    font-size: 2.2rem;
+  }
+
+  .intro-description {
+    font-size: 1rem;
+  }
+
+  .overview-card {
+    padding: 20px;
+  }
+
+  .background-video {
+  display: none;
+}
+}

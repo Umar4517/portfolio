@@ -1,0 +1,30 @@
+.section-title {
+    font-size: 2.8rem;
+  color: #e884fc;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.timeline-section {
+    padding: 4rem 2rem;
+    background-color: #030014;
+    color: #FFFFFF;
+    position: relative;
+}
+
+/* You can use these styles to customize the VerticalTimelineElements more */
+
+
+/* You can use these styles to customize the VerticalTimelineElements more */
+.vertical-timeline-element--work h3 {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+
+.vertical-timeline-element--work ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #DDDDDD;
+}
